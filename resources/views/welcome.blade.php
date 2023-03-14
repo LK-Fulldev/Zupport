@@ -177,7 +177,7 @@
                 e.preventDefault();
             });
 
-            $('#confimreSearch').click(function(e) { // Function Confirmed Search
+            $('#confimreSearch').unbind('click').click(function(event){ // Function Confirmed Search
                 // Reset HTML
                 $('#contentLoader').html("");
                 $('#pagination').html("");
@@ -319,6 +319,7 @@
                         $(".overlay-loader").hide();
                     }
                 });
+                $('#confimreHidden').attr('type', 'submit');
             });
         });
     </script>
