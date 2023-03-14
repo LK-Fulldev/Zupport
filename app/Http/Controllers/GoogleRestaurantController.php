@@ -16,7 +16,7 @@ class GoogleRestaurantController extends Controller
     public function list(Request $request)
     {
         // Cache Query
-        $googleData = Cache::remember('googleRestaurantslist', 3360, function () use ($request) {
+        $googleData = Cache::remember($request->search_word, 3360, function () use ($request) {
             $googleData = GoogleRestaurants::query();
             $googleData->where('key_search', 'like', "%{$request->search_word}%");
             $googleData = $googleData->get();
