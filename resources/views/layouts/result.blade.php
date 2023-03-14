@@ -61,8 +61,6 @@
                         break;
                 }
             @endphp
-
-
             <div class="row justify-content-center mb-3">
                 <div class="col-md-12 col-xl-10">
                     <div class="card shadow-0 border rounded-3">
